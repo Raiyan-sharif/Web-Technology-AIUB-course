@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script>
+		function validate(){
+			flag=true;
+	m = document.getElementById("msg");
+	if(document.login.n.value.length==0){
+		m.innerHTML="Give a Name";
+		m.style.color="red";
+		flag=false;
+	}
+	else if(document.login.p.value.length==0){
+		m.innerHTML="Give a Password";
+		m.style.color="red";
+		flag=false;
+	}
+	return flag;
+}
+	</script>
+	</head>
+	
+<BODY>
+	<form id="logId" action="index.php" method="Post" enctype="multipart/form-data" name="login">
+	<center>UserName:
+	<input type="text" onkeyup="validate()" name="n" id ="nam"/><span id="msg"></span>
+	<br>
+	<br>Password:
+	<input type="pasword" onkeyup="validate()" name="p" id="pass"/>
+	<br><br>
+	<input type="submit" name="s"/>
+	</center>
+	</form>
+	
+</form>
+</BODY>
+</html>
